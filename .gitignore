@@ -1,0 +1,5 @@
+mvec
+.vscode/
+*.tmp
+build/
+

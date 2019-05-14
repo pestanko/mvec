@@ -6,7 +6,7 @@
 #define SIZE 10
 
 void print_number(int num, size_t i) {
-    printf("int: %d @ %lu\n", num, i);
+    printf("int[%lu]: %d\n", i, num);
 }
 
 void fill_in(MVECP_TYPE(int) numbers) {
@@ -46,6 +46,8 @@ int main(void) {
     MVEC_EACH(int, numbers, number, {
         printf("This is proc: %d\n", *number);
     });
+
+    puts("------");
 
     for(int i = 0; i < (int) MVEC_SIZE(dnums); i++ ) {
         printf( "double: %d : %06.2lf\n",i , MVEC_GET(dnums, i));
